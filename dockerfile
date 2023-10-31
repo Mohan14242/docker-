@@ -1,3 +1,3 @@
 FROM almalinux:8
-run cd /tmp
+workdir /tmp
 run echo "this is the moahns best way"> chiru.txt
