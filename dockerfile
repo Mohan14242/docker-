@@ -1,8 +1,5 @@
-ARG version
-FROM almalinux:${version}
-ARG name
-ARG student
-ENV course=${name}
-ENV student=${student}
-run echo "the trainer name is ${name} and $ student is ${student}"
-RUN echo "thi is thhe mohan ${version}"
+from almalinux:8
+run yum install nginx -y
+run rm -rf /usr/share/nginx/html/index.html
+ONBUILD add index.html
+cmd ["nginx","-g","daemon off;"]
