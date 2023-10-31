@@ -1,3 +1,3 @@
-arg version
-from almalinux:$(version)
-run echo "thi is thhe mohan $(version)"
+ARG version
+FROM almalinux:${version}
+RUN echo "thi is thhe mohan ${version}"
