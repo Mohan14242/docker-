@@ -1,4 +1,5 @@
 FROM almalinux:8
+copy chiru.html /usr/share/nginx/html/chiru.html
 LABEL course=devop\
        student=mohan
 ENV name=mohan\
