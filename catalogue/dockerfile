@@ -1,0 +1,7 @@
+from node:14
+expose 8080
+workdir /opt/server/
+copy package.json .
+copy server.json .
+run npm install 
+cmd ["node","server.js"]
