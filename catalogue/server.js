@@ -8,14 +8,14 @@ const expPino = require('express-pino-logger');
 const logger = pino({
     level: 'info',
     prettyPrint: false,
-    useLevelLabels: true,
-    level: true
+    useLevelLabels: true
 });
 const expLogger = expPino({
     logger: logger
 });
 
 // MongoDB
+// Actually, this is done by developers. But to reflect we are adding some content and imagine this extra feature
 var db;
 var collection;
 var mongoConnected = false;
@@ -35,7 +35,7 @@ app.use(bodyParser.json());
 
 app.get('/health', (req, res) => {
     var stat = {
-        app: 'OK',
+        app: 'OK-2',
         mongo: mongoConnected
     };
     res.json(stat);
