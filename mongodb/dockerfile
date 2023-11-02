@@ -1,1 +1,2 @@
 from mongodb
+copy *.js/docker-entrypoint-initdb.d/
